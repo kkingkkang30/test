@@ -1,0 +1,27 @@
+.img-title-tag-list .item {
+    width: 505px;
+    max-height: 264px;
+    overflow: hidden;
+    align-items: stretch;
+    margin-bottom: 22px;
+    border: 1px solid grey;
+  }
+  
+  .img-title-tag-list .item .profile {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .img-title-tag-list .item .column-container {
+    justify-content: space-between;
+    flex: 1;
+    margin: 3px;
+    margin-left: 10px;
+  }
+  
+  .img-title-tag-list .item .subinfo-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-right: 15px;
+  }

@@ -1,0 +1,30 @@
+<html>
+<body>
+  <button onclick="hello()">SayHello</button>
+  <br/>  <br/>
+  <button onclick="getItemList()">getItem</button>
+
+</body>
+<script src="../js/parseApis.js"></script>
+<script>
+    async function hello() {
+        const result1 = await ParseApi.sayHello();
+        console.log(result1);
+    }
+
+    async function getItemList() {
+        const result2 = await ParseApi2.itemList();
+        console.log(result2);
+    }
+
+    async function signUp() {
+        const username = document.getElementById('input-username').value;
+        const password = document.getElementById('input-password').value;
+        console.log(username, password);
+
+        const result = await ParseApi3.signUp(username, password);
+        console.log(result);
+    }
+</script>
+
+</html>

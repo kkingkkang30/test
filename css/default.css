@@ -1,0 +1,58 @@
+@import url(./variables.css);
+@import url(./fonts.css);
+
+/********** Basic **********/
+body {
+    min-width: 344px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    cursor: pointer;
+  }
+
+  button:hover {
+      cursor: pointer;
+  }
+
+  button:focus {
+      outline: none;
+  }
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/********** Body **********/
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.body .contents {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    max-width: var(--contents-max-width);
+}
+
+.body .full-width-contents {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+}
+
+/********** End Body **********/

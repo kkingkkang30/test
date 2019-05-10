@@ -1,0 +1,37 @@
+<html>
+<div class="signup">
+    <input id="input-username" type="text" placeholder="username">
+    <input id="input-password" type="password" placeholder="password">
+    <button onclick="signUp()">SignUp</button>
+    <button onclick="signIn()">SignIn</button>
+</div>
+
+<script src="../js/parse.min.js"></script>
+<script src="../js/parseApis.js"></script>
+<script>
+    async function signUp() {
+        const username = document.getElementById('input-username').value;
+        const password = document.getElementById('input-password').value;
+        console.log(username, password);
+
+        const result = await ParseApi3.signUp(username, password);
+        console.log(result);
+
+        console.log(result.sessionToken);
+         localStorage.setItem('session', result.sessionToken);
+    }
+
+    async function signIn() {
+    const username = document.getElementById('input-username').value;
+    const password = document.getElementById('input-password').value;
+    console.log(username, password);
+
+    const result = await ParseApi4.signIn(username, password);
+    console.log(result);
+    console.log(result.sessionToken);
+    localStorage.setItem('session', result.sessionToken);
+  }
+  
+</script>
+
+</html>
